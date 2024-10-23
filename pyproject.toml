@@ -4,16 +4,26 @@ build-backend = "briefcase"
 
 [tool.briefcase]
 app_name = "MeuApp"
-module = "main"  # Nome do módulo onde está o seu código, sem .py
+module = "main"
 version = "0.1"
 description = "Um aplicativo Kivy simples"
 author = "Seu Nome"
 author_email = "seu.email@example.com"
-license = "MIT"
+
+# Definição da licença de acordo com PEP 621
+license.file = "LICENSE"
+
+# Informações do pacote
+[tool.briefcase.bundle]
+identifier = "com.seu_nome.meuapp"
+icon = "path/to/icon.png"  # Se você tiver um ícone, coloque o caminho correto aqui
+version = "0.1"
+
+# Nome do projeto
+project_name = "MeuApp"
 
 [tool.briefcase.app.MeuApp]
 formal_name = "Meu App"
 description = "Uma descrição do seu aplicativo"
 author = "Seu Nome"
 author_email = "seu.email@example.com"
-version = "0.1"
