@@ -10,13 +10,12 @@ description = "Um aplicativo Kivy simples"
 author = "Seu Nome"
 author_email = "seu.email@example.com"
 
-# Definição da licença de acordo com PEP 621
+# Definição da licença
 license.file = "LICENSE"
 
 # Informações do pacote
 [tool.briefcase.bundle]
-identifier = "com.seu_nome.meuapp"  # Substitua por um identificador único
-icon = "path/to/icon.png"  # Substitua pelo caminho correto do ícone, se você tiver um
+identifier = "com.seu_nome.meuapp"
 
 # Nome do projeto
 project_name = "MeuApp"
