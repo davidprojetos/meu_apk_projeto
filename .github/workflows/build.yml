@@ -1,0 +1,35 @@
+name: Build APK
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          pip install kivy pyside2
+
+      - name: Build APK
+        run: |
+          # Comando para criar o APK, você pode substituir por um empacotador de sua escolha
+          pyside2-rcc -o output.py main.py
+          
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: meu_apk
+          path: output.py
+
