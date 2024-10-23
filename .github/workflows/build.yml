@@ -20,12 +20,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install kivy
-          pip install pyinstaller
+          sudo apt-get update
+          sudo apt-get install -y python3-opengl libgl1-mesa-dev libglu1-mesa-dev
+          pip install kivy pyinstaller
 
       - name: Build APK with PyInstaller
         run: |
-          pyinstaller --onefile --name meu_apk main.py
+          pyinstaller --onefile --name meu_apk main.py --hidden-import kivy.core.window --hidden-import kivy.core.graphics --hidden-import kivy.core.audio --log-level=DEBUG
           
       - name: Upload APK
         uses: actions/upload-artifact@v3
