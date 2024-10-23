@@ -15,15 +15,16 @@ license.file = "LICENSE"
 
 # Informações do pacote
 [tool.briefcase.bundle]
-identifier = "com.seu_nome.meuapp"
-icon = "path/to/icon.png"  # Se você tiver um ícone, coloque o caminho correto aqui
-version = "0.1"
+identifier = "com.seu_nome.meuapp"  # Substitua por um identificador único
+icon = "path/to/icon.png"  # Substitua pelo caminho correto do ícone, se você tiver um
 
 # Nome do projeto
 project_name = "MeuApp"
 
+# Informações específicas do aplicativo
 [tool.briefcase.app.MeuApp]
 formal_name = "Meu App"
 description = "Uma descrição do seu aplicativo"
 author = "Seu Nome"
 author_email = "seu.email@example.com"
+version = "0.1"
