@@ -16,18 +16,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.x"
+          python-version: "3.x"  # Use a versão do Python que você precisa
 
-      - name: Install Briefcase
+      - name: Install dependencies
         run: |
-          pip install briefcase
+          pip install kivy
+          pip install pyinstaller
 
-      - name: Build APK
+      - name: Build APK with PyInstaller
         run: |
-          briefcase build android
-
+          pyinstaller --onefile --name meu_apk main.py
+          
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
           name: meu_apk
-          path: target/android/app/build/outputs/apk/debug/*.apk
+          path: dist/meu_apk  # Caminho do executável gerado
