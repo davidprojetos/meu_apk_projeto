@@ -18,7 +18,7 @@ license.file = "LICENSE"
 identifier = "com.seu_nome.meuapp"
 
 # Nome do projeto
-project_name = "MeuApp"
+project_name = "MeuApp"  # Certifique-se de que esta linha está presente
 
 # Informações específicas do aplicativo
 [tool.briefcase.app.MeuApp]
