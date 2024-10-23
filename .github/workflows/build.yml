@@ -22,7 +22,7 @@ jobs:
         run: |
           pip install briefcase
 
-      - name: Create APK
+      - name: Build APK
         run: |
           briefcase build android
 

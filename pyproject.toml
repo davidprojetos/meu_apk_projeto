@@ -1,0 +1,13 @@
+[build-system]
+requires = ["briefcase"]
+build-backend = "briefcase"
+
+[tool.briefcase]
+app_name = "MeuApp"
+module = "main"
+version = "0.1"
+description = "Um aplicativo Kivy simples"
+author = "Seu Nome"
+author_email = "seu.email@example.com"
+license = "MIT"
+
