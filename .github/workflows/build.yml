@@ -18,18 +18,16 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
+      - name: Install Briefcase
         run: |
-          pip install kivy pyside2
+          pip install briefcase
 
-      - name: Build APK
+      - name: Create APK
         run: |
-          # Comando para criar o APK, você pode substituir por um empacotador de sua escolha
-          pyside2-rcc -o output.py main.py
-          
+          briefcase build android
+
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
           name: meu_apk
-          path: output.py
-
+          path: target/android/app/build/outputs/apk/debug/*.apk
