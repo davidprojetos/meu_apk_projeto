@@ -4,10 +4,16 @@ build-backend = "briefcase"
 
 [tool.briefcase]
 app_name = "MeuApp"
-module = "main"
+module = "main"  # Nome do módulo onde está o seu código, sem .py
 version = "0.1"
 description = "Um aplicativo Kivy simples"
 author = "Seu Nome"
 author_email = "seu.email@example.com"
 license = "MIT"
 
+[tool.briefcase.app.MeuApp]
+formal_name = "Meu App"
+description = "Uma descrição do seu aplicativo"
+author = "Seu Nome"
+author_email = "seu.email@example.com"
+version = "0.1"
